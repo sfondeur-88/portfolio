@@ -1,11 +1,11 @@
-import Box from "@mui/material/Box";
+import Box from '@mui/material/Box';
 
 type Position = {
   top?: number;
   left?: number;
   right?: number;
   bottom?: number;
-}
+};
 
 interface Props {
   width: number;

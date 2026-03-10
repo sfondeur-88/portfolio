@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
-import { Outlet } from "react-router";
-import AuroraGradient from "../../ui/design/AuroraGradient";
-import { MAIN_PADDING } from "../layout-utils";
+import { Box } from '@mui/material';
+import { Outlet } from 'react-router';
+import AuroraGradient from '../../ui/design/AuroraGradient';
+import { MAIN_PADDING } from '../../../utils/layout';
 
 const Main = () => {
   return (
@@ -28,7 +28,7 @@ const Main = () => {
 
           '&:hover': {
             backgroundColor: '#9A9A9A',
-          }
+          },
         },
       }}
     >
@@ -37,7 +37,12 @@ const Main = () => {
 
       {/* Left & Right Aurora-Gradients */}
       <AuroraGradient width={375} height={375} position={{ top: 0, left: 0 }} colour="#6E9EFF" />
-      <AuroraGradient width={425} height={425} position={{ bottom: 0, right: 0 }} colour="#66FFCC" />
+      <AuroraGradient
+        width={425}
+        height={425}
+        position={{ bottom: 0, right: 0 }}
+        colour="#66FFCC"
+      />
     </Box>
   );
 };

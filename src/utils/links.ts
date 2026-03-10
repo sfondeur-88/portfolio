@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 export const emailAddress = 'shane@sfondeur.dev';
 

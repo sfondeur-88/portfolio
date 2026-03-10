@@ -1,15 +1,15 @@
-import { Mood, TerminalOutlined, WavingHand } from "@mui/icons-material";
-import { Box, Stack, Tab, Tabs, Typography } from "@mui/material";
-import { ReactElement } from "react";
-import { useLocation, useNavigate } from "react-router";
-import { ROUTE_PATHS } from "../../../routes/paths";
-import { HEADER_HEIGHT } from "../layout-utils";
+import { Mood, TerminalOutlined, WavingHand } from '@mui/icons-material';
+import { Box, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { ReactElement } from 'react';
+import { useLocation, useNavigate } from 'react-router';
+import { ROUTE_PATHS } from '../../../routes/paths';
+import { HEADER_HEIGHT } from '../../../utils/layout';
 
 type HeaderTabs = {
   label: string;
   path: string;
   icon: ReactElement;
-}
+};
 
 const headerTabs: HeaderTabs[] = [
   { label: 'Welcome.tsx', path: ROUTE_PATHS.WELCOME, icon: <WavingHand /> },
@@ -50,13 +50,9 @@ const Header = () => {
             borderRightColor: 'divider',
           }}
         >
-          <Typography
-            component="span"
-            color="primary"
-            fontSize={18}
-            fontWeight={600}
-          >
-            shane_fondeur</Typography>
+          <Typography component="span" color="primary" fontSize={18} fontWeight={600}>
+            shane_fondeur
+          </Typography>
         </Box>
 
         <Tabs
@@ -77,15 +73,21 @@ const Header = () => {
               '&.Mui-selected, &:hover': {
                 color: 'text.primary',
               },
-            }
+            },
           }}
         >
           {headerTabs.map((tab) => (
-            <Tab key={tab.label} value={tab.path} label={tab.label} icon={tab.icon} iconPosition="start" />
+            <Tab
+              key={tab.label}
+              value={tab.path}
+              label={tab.label}
+              icon={tab.icon}
+              iconPosition="start"
+            />
           ))}
         </Tabs>
       </Stack>
-    </Box >
+    </Box>
   );
 };
 

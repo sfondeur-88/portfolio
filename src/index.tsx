@@ -4,8 +4,9 @@ import { RouterProvider } from 'react-router';
 import './index.css';
 import { router } from './routes';
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

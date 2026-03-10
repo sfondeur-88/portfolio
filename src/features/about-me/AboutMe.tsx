@@ -1,12 +1,11 @@
 // import Masonry from '@mui/lab/Masonry'; // TODO:Shane - Probably remove mui lab package?
-import { ImageList, ImageListItem, Stack } from "@mui/material";
-import { useEffect } from "react";
+import { ImageList, ImageListItem, Stack } from '@mui/material';
+import { useEffect } from 'react';
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${size * rows
-      }&fit=crop&auto=format&dpr=2 2x`,
+    srcSet: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format&dpr=2 2x`,
   };
 }
 
@@ -24,7 +23,7 @@ const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
     title: 'Camera',
-  }
+  },
 ];
 
 const AboutMe = () => {
@@ -36,7 +35,7 @@ const AboutMe = () => {
   // Each paragraph should be its own "section".
   // The left can be the text, while the right could be associated images to tell the story.
   // Could alternate these if we want each section? backgroundColor->#082844 for every other section
-  // Since we'll be scrolling, we could do some paralax scroll effects? 
+  // Since we'll be scrolling, we could do some paralax scroll effects?
   // Overall should be styled similar to vs code, like having split windows open
   // ex: Left is the code editor, right window is the images like a README.md file in preview mode.
 
@@ -48,12 +47,7 @@ const AboutMe = () => {
           <p>My journey started with...</p>
         </div>
         <div>
-          <ImageList
-            sx={{ width: 500, height: 450 }}
-            variant="quilted"
-            cols={4}
-            rowHeight={121}
-          >
+          <ImageList sx={{ width: 500, height: 450 }} variant="quilted" cols={4} rowHeight={121}>
             {itemData.map((item) => (
               <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                 <img

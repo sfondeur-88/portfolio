@@ -1,8 +1,9 @@
-import { Email } from "@mui/icons-material";
-import { Box, IconButton, Snackbar, Stack, Typography } from "@mui/material";
-import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
-import { emailAddress, socialLinks } from "../../../utils/links";
-import { FOOTER_HEIGHT } from "../layout-utils";
+import { Email } from '@mui/icons-material';
+import { Box, IconButton, Stack, Typography } from '@mui/material';
+import { useCopyToClipboard } from '../../../hooks/useCopyToClipboard';
+import { FOOTER_HEIGHT } from '../../../utils/layout';
+import { emailAddress, socialLinks } from '../../../utils/links';
+import Snackbar from '../../ui/core/Snackbar';
 
 const Footer = () => {
   const { copy, copied, handleClose } = useCopyToClipboard();
@@ -14,17 +15,12 @@ const Footer = () => {
         height: FOOTER_HEIGHT,
         zIndex: 1000,
         border: '1px solid',
-        borderColor: '#293B4D',
+        borderColor: 'divider',
         borderRadius: '0px 0px 8px 8px',
         backgroundColor: 'background.default',
       }}
     >
-      <Stack
-        direction="row"
-        alignItems="center"
-        height="100%"
-        gap={2}
-      >
+      <Stack direction="row" alignItems="center" height="100%" gap={2}>
         <Box
           sx={{
             width: '160px',
@@ -37,22 +33,13 @@ const Footer = () => {
             borderRightColor: 'divider',
           }}
         >
-          <Typography
-            component="span"
-            fontSize={14}
-            fontWeight={600}
-          >
+          <Typography component="span" fontSize={14} fontWeight={600}>
             find_me_at:
           </Typography>
         </Box>
 
         {socialLinks.map(({ Icon, href }) => (
-          <IconButton
-            key={href}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <IconButton key={href} href={href} target="_blank" rel="noopener noreferrer">
             <Icon />
           </IconButton>
         ))}
@@ -61,13 +48,7 @@ const Footer = () => {
         </IconButton>
       </Stack>
 
-      <Snackbar
-        open={copied}
-        onClose={handleClose}
-        message="Copied Email to clipboard!"
-        autoHideDuration={3000}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-      />
+      <Snackbar message="Copied Email to clipboard!" open={copied} onClose={handleClose} />
     </Box>
   );
 };

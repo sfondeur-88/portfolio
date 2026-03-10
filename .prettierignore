@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist
+dist-ssr
+public
+coverage
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/

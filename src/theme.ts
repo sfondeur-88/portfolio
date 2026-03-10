@@ -1,7 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { CSSProperties } from 'react';
-
-export const CODE_FONT: CSSProperties['fontFamily'] = 'monospace';
 
 export enum Colours {
   Blue = '#4B59C9',
@@ -26,7 +23,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'JetBrains Mono',
+    fontFamily: '"JetBrains Mono", "Fira Code", monospace',
   },
   shape: {
     borderRadius: 8,
@@ -38,9 +35,9 @@ const theme = createTheme({
           color: theme.palette.primary.main,
           '&:hover': {
             backgroundColor: `rgba(49, 170, 141, 0.15)`,
-          }
-        })
-      }
+          },
+        }),
+      },
     },
     MuiLink: {
       styleOverrides: {
@@ -48,7 +45,7 @@ const theme = createTheme({
           '&:focus-visible': {
             outline: `2px solid ${theme.palette.primary.main}`,
             borderRadius: '2px',
-          }
+          },
         }),
         underlineHover: true,
       },
@@ -58,10 +55,10 @@ const theme = createTheme({
         root: ({ theme }) => ({
           '& .MuiTouchRipple-root': {
             color: theme.palette.primary.main,
-            opacity: 0.7,
-          }
+            opacity: 0.6,
+          },
         }),
-      }
+      },
     },
   },
 });
