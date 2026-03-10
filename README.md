@@ -4,8 +4,8 @@ Personal portfolio built with React, TypeScript, and Vite.
 
 ## Tech Stack
 
-- Typescript
 - React 19
+- Typescript
 - Vite + SWC
 - MUI v7
 - React Router v7
