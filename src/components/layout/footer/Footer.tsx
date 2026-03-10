@@ -1,9 +1,9 @@
+import Snackbar from '@/components/ui/core/Snackbar';
+import { useCopyToClipboard } from '@/hooks/useCopyToClipboard';
+import { FOOTER_HEIGHT } from '@/utils/layout';
+import { emailAddress, socialLinks } from '@/utils/links';
 import { Email } from '@mui/icons-material';
 import { Box, IconButton, Stack, Typography } from '@mui/material';
-import { useCopyToClipboard } from '../../../hooks/useCopyToClipboard';
-import { FOOTER_HEIGHT } from '../../../utils/layout';
-import { emailAddress, socialLinks } from '../../../utils/links';
-import Snackbar from '../../ui/core/Snackbar';
 
 const Footer = () => {
   const { copy, copied, handleClose } = useCopyToClipboard();
@@ -33,7 +33,7 @@ const Footer = () => {
             borderRightColor: 'divider',
           }}
         >
-          <Typography component="span" fontSize={14} fontWeight={600}>
+          <Typography component="span" fontSize={14} fontWeight={600} color="primary.main">
             find_me_at:
           </Typography>
         </Box>

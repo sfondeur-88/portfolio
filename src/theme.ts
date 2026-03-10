@@ -22,6 +22,7 @@ const theme = createTheme({
       primary: '#FFFFFF',
     },
   },
+  // TODO:Shane - fontWeights aren't working with first 2:
   typography: {
     fontFamily: '"JetBrains Mono", "Fira Code", monospace',
   },

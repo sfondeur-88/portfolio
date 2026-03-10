@@ -1,6 +1,6 @@
+import theme, { Colours } from '@/theme';
 import { Typography } from '@mui/material';
 import { ReactNode } from 'react';
-import theme, { Colours } from '../../../theme';
 
 type TokenType = 'keyword' | 'variable' | 'string';
 

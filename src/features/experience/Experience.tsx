@@ -5,8 +5,8 @@ const Experience = () => {
     document.title = "Experience | Shane's Dev Portfolio";
   }, []);
 
-  // TODO: Shane - thinking this could be a landing page for my projects/experience with a list of big cards showcasing each company?
-  // Then upon clicking a company card, it routes us to a sub-route for their page?
+  // TODO: Shane
+  // - A Handful of features i'm proud of creating. Visuals to go along with it if able.
 
   return <div>Experience</div>;
 };
