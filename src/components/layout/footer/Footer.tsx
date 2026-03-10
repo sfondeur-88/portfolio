@@ -8,6 +8,7 @@ import { Box, IconButton, Stack, Typography } from '@mui/material';
 const Footer = () => {
   const { copy, copied, handleClose } = useCopyToClipboard();
 
+  // TODO:Shane - Change Footer to VSCode footer.
   return (
     <Box
       component="footer"
@@ -33,7 +34,7 @@ const Footer = () => {
             borderRightColor: 'divider',
           }}
         >
-          <Typography component="span" fontSize={14} fontWeight={600} color="primary.main">
+          <Typography variant="label" color="primary.main">
             find_me_at:
           </Typography>
         </Box>

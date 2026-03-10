@@ -50,7 +50,7 @@ const Header = () => {
             borderRightColor: 'divider',
           }}
         >
-          <Typography component="span" color="primary" fontSize={18} fontWeight={600}>
+          <Typography variant="bodyLarge" color="primary">
             shane_fondeur
           </Typography>
         </Box>

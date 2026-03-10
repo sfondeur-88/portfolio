@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import Footer from './components/layout/footer/Footer';
 import Header from './components/layout/header/Header';
 import Main from './components/layout/main/Main';
@@ -7,6 +7,7 @@ import theme from './theme';
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <div
         style={{
           height: '100vh',

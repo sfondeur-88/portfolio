@@ -8,7 +8,7 @@ const Main = () => {
       sx={{
         flexGrow: 1,
         minHeight: 0,
-        backgroundColor: 'background.default',
+        backgroundColor: 'background.default', // TODO:Shane - might not need anymore.
       }}
     >
       <Outlet />

@@ -16,13 +16,14 @@ const Welcome = () => {
 
   return (
     <div>
-      <Typography fontSize={20}>Hi there!!</Typography>
-
-      <Typography variant="h1" fontSize={56}>
-        Welcome to my portfolio
+      {/* TODO:Shane - adjust margins/gaps between these. */}
+      <Typography fontSize={20} fontWeight={400} fontStyle={'italic'}>
+        Hi there!!
       </Typography>
 
-      <Typography variant="h2" fontSize={32} sx={{ mt: 2, mb: 6, color: 'secondary.main' }}>
+      <Typography variant="title">Welcome to my portfolio</Typography>
+
+      <Typography variant="subtitle" color="secondary.main" sx={{ mt: 2, mb: 6 }}>
         <TerminalCursorBlink />
         senior_front_end_engineer
       </Typography>
@@ -74,10 +75,11 @@ const Welcome = () => {
       </Stack>
 
       <Typography
-        variant="h2"
+        variant="subtitle"
         fontSize={46}
         textAlign="center"
-        sx={{ mt: 10, color: 'secondary.main' }}
+        color="secondary.main"
+        sx={{ mt: 10 }}
       >
         {`Plz hire 🙏`}
       </Typography>
