@@ -17,7 +17,7 @@ const AboutMe = () => {
   //       education.md
 
   return (
-    <Stack>
+    <Stack px={3}>
       <article>
         {/* Bio/Intro */}
         <section>

@@ -1,3 +1,4 @@
+import Stack from '@mui/material/Stack';
 import { useEffect } from 'react';
 
 const Experience = () => {
@@ -8,7 +9,16 @@ const Experience = () => {
   // TODO: Shane
   // - A Handful of features i'm proud of creating. Visuals to go along with it if able.
 
-  return <div>Experience</div>;
+  return (
+    <Stack px={3}>
+      <article>
+        <section>
+          <h1>Experience</h1>
+          <p>LoremIpsum</p>
+        </section>
+      </article>
+    </Stack>
+  );
 };
 
 export default Experience;

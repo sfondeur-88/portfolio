@@ -1,4 +1,5 @@
-import { GitHub, LinkedIn } from '@mui/icons-material';
+import GitHub from '@mui/icons-material/GitHub';
+import LinkedIn from '@mui/icons-material/LinkedIn';
 
 export const emailAddress = 'shane@sfondeur.dev';
 
@@ -11,6 +12,6 @@ export enum LinkHrefs {
 }
 
 export const socialLinks = [
-  { Icon: LinkedIn, href: LinkHrefs.LinkedIn, external: true },
-  { Icon: GitHub, href: LinkHrefs.GitHub, external: true },
+  { icon: <LinkedIn />, href: LinkHrefs.LinkedIn, label: 'View LinkedIn Profile', external: true },
+  { icon: <GitHub />, href: LinkHrefs.GitHub, label: 'View GitHub Profile', external: true },
 ];

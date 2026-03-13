@@ -8,7 +8,9 @@ const Main = () => {
       sx={{
         flexGrow: 1,
         minHeight: 0,
-        backgroundColor: 'background.default', // TODO:Shane - might not need anymore.
+        borderLeft: '1px solid',
+        borderRight: '1px solid',
+        borderColor: 'divider',
       }}
     >
       <Outlet />

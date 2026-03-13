@@ -1,6 +1,6 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import Footer from './components/layout/footer/Footer';
-import Header from './components/layout/header/Header';
+import HeaderNew from './components/layout/header/Header';
 import Main from './components/layout/main/Main';
 import theme from './theme';
 
@@ -10,12 +10,14 @@ function App() {
       <CssBaseline />
       <div
         style={{
-          height: '100vh',
+          height: 'calc(100vh - 8px)', // 4px padding on body.
           display: 'flex',
           flexDirection: 'column',
+          borderRadius: '8px',
+          backgroundColor: theme.palette.background.default,
         }}
       >
-        <Header />
+        <HeaderNew />
         <Main />
         <Footer />
       </div>

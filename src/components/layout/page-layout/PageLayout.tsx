@@ -1,18 +1,29 @@
-import { Outlet } from 'react-router';
+import AppSidebar from '../app-sidebar/AppSidebar';
+import CodeEditor from '../code-editor/CodeEditor';
 
 const PageLayout = () => {
-  // 📄 Explorer — toggles sidebar
-  // 🔍 Search — command palette / jump to section
-  // 🐙 GitHub — external link
-  // 👤 LinkedIn — external link
-  // 🎮 Extensions — easter egg hobbies panel
+  // TODO:Shane - scrollbar
+  // scrollBehavior: 'smooth',
+  // '::-webkit-scrollbar': {
+  //   width: '16px',
+  // },
+  // '::-webkit-scrollbar-track': {
+  //   backgroundColor: '#222222',
+  // },
+  // '::-webkit-scrollbar-thumb': {
+  //   backgroundColor: '#444444',
+  //   borderRadius: '2px',
+  //   cursor: 'pointer',
+
+  //   '&:hover': {
+  //     backgroundColor: '#9A9A9A',
+  //   },
+  // },
 
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'row' }}>
-      <nav style={{ flex: '0 0 20%', backgroundColor: 'tomato' }}>Left Nav</nav>
-      <div style={{ flex: '0 0 80%', backgroundColor: 'slateblue' }}>
-        <Outlet />
-      </div>
+      <AppSidebar />
+      <CodeEditor />
     </div>
   );
 };

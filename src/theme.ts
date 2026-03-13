@@ -62,6 +62,7 @@ const theme = createTheme({
     divider: '#293B4D',
     text: {
       primary: '#FFFFFF',
+      secondary: '#808080',
     },
   },
   typography: {
@@ -108,6 +109,13 @@ const theme = createTheme({
     borderRadius: 8,
   },
   components: {
+    MuiCssBaseline: {
+    styleOverrides: {
+      body: {
+        backgroundColor: '#3c3c3c',
+      },
+    },
+  },
     MuiIconButton: {
       styleOverrides: {
         root: ({ theme }) => ({

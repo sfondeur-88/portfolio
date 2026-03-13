@@ -39,9 +39,15 @@ const Footer = () => {
           </Typography>
         </Box>
 
-        {socialLinks.map(({ Icon, href }) => (
-          <IconButton key={href} href={href} target="_blank" rel="noopener noreferrer">
-            <Icon />
+        {socialLinks.map(({ icon, href, label }) => (
+          <IconButton
+            key={href}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+          >
+            {icon}
           </IconButton>
         ))}
         <IconButton onClick={() => copy(emailAddress)}>

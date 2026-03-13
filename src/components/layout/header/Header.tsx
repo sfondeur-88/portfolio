@@ -1,92 +1,52 @@
-import { Mood, TerminalOutlined, WavingHand } from '@mui/icons-material';
-import { Box, Stack, Tab, Tabs, Typography } from '@mui/material';
-import { ReactElement } from 'react';
-import { useLocation, useNavigate } from 'react-router';
-import { ROUTE_PATHS } from '../../../routes/paths';
-import { HEADER_HEIGHT } from '../../../utils/layout';
-
-type HeaderTabs = {
-  label: string;
-  path: string;
-  icon: ReactElement;
-};
-
-const headerTabs: HeaderTabs[] = [
-  { label: 'Welcome.tsx', path: ROUTE_PATHS.WELCOME, icon: <WavingHand /> },
-  { label: 'AboutMe.tsx', path: ROUTE_PATHS.ABOUT_ME, icon: <Mood /> },
-  { label: 'Experience.tsx', path: ROUTE_PATHS.EXPERIENCE, icon: <TerminalOutlined /> },
-];
+import TrafficLightButton from '@/components/ui/design/TrafficLightButton';
+import FullscreenIcon from '@/components/ui/icons/FullscreenIcon';
+import { Close, Remove } from '@mui/icons-material';
+import { Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 
 const Header = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const currentTab = location.pathname;
-
-  const handleTabChange = (_: React.SyntheticEvent, newValue: string) => {
-    navigate(newValue);
+  const onTrafficLightClick = () => {
+    // TODO:Shane - Easter egg when clicked
   };
 
   return (
     <Box
-      component="header"
       sx={{
-        height: HEADER_HEIGHT,
-        border: '1px solid',
+        height: 40,
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        paddingX: 1.5,
+        borderTop: '1px solid',
+        borderLeft: '1px solid',
+        borderRight: '1px solid',
         borderColor: 'divider',
         borderRadius: '8px 8px 0px 0px',
-        backgroundColor: 'background.default',
-        zIndex: 1000,
       }}
     >
-      <Stack direction="row">
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '300px',
-            paddingX: 1,
-            borderRight: '1px solid',
-            borderRightColor: 'divider',
-          }}
-        >
-          <Typography variant="bodyLarge" color="primary">
-            shane_fondeur
-          </Typography>
-        </Box>
+      <Box sx={{ display: 'flex', gap: 1.5, padding: 1, '&:hover svg': { opacity: 1 } }}>
+        <TrafficLightButton colour="#FF5252" handleClick={onTrafficLightClick} icon={<Close />} />
+        <TrafficLightButton colour="#FFBC42" handleClick={onTrafficLightClick} icon={<Remove />} />
+        <TrafficLightButton
+          colour="#2DBF2D"
+          handleClick={onTrafficLightClick}
+          icon={<FullscreenIcon />}
+        />
+      </Box>
 
-        <Tabs
-          value={currentTab}
-          onChange={handleTabChange}
-          aria-label="tab-group"
-          sx={{
-            height: HEADER_HEIGHT,
-            '& .MuiTabs-list > .MuiTab-root': {
-              minHeight: HEADER_HEIGHT,
-              textTransform: 'inherit',
-              borderRight: '1px solid',
-              borderRightColor: 'divider',
-              borderRadius: 0,
-              boxSizing: 'border-box',
-              transition: '200ms color',
-              color: 'rgba(255,255,255,0.5)',
-              '&.Mui-selected, &:hover': {
-                color: 'text.primary',
-              },
-            },
-          }}
-        >
-          {headerTabs.map((tab) => (
-            <Tab
-              key={tab.label}
-              value={tab.path}
-              label={tab.label}
-              icon={tab.icon}
-              iconPosition="start"
-            />
-          ))}
-        </Tabs>
-      </Stack>
+      {/* TODO:Shane - Search/Input-lookalike area to wrap the name */}
+      <Box
+        sx={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          // border: '1px solid',
+        }}
+      >
+        <Typography variant="body" fontWeight={700} color="primary">
+          shane_fondeur
+        </Typography>
+      </Box>
     </Box>
   );
 };
