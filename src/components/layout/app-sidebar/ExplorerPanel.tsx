@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { TogglePanelId } from './ActivityBar';
-import ExplorerContent from './ExplorerContent';
 import ExtensionsContent from './ExtensionsContent';
+import ExplorerContent from './explorer/ExplorerContent';
 
 interface ExplorerPanelProps {
   activePanel: TogglePanelId | null;
@@ -11,7 +11,7 @@ const ExplorerPanel = ({ activePanel }: ExplorerPanelProps) => {
   return (
     <Box
       sx={{
-        width: activePanel ? 240 : 0,
+        width: activePanel ? 260 : 0,
         overflow: 'hidden',
         borderRight: '1px solid',
         borderColor: 'divider',

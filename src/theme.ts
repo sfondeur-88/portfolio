@@ -68,7 +68,7 @@ const theme = createTheme({
   typography: {
     fontFamily: '"JetBrains Mono", monospace',
     title: {
-      fontSize: '56px',
+      fontSize: '50px',
       fontWeight: 400,
     },
     subtitle: {
@@ -110,12 +110,12 @@ const theme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-    styleOverrides: {
-      body: {
-        backgroundColor: '#3c3c3c',
+      styleOverrides: {
+        body: {
+          backgroundColor: '#000',
+        },
       },
     },
-  },
     MuiIconButton: {
       styleOverrides: {
         root: ({ theme }) => ({

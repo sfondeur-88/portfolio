@@ -16,20 +16,22 @@ const Welcome = () => {
   }, []);
 
   return (
-    <Stack height="100%" justifyContent="center" alignItems="center">
+    <Stack
+      height="100%"
+      justifyContent="center"
+      alignItems="center"
+      position="relative"
+      overflow="hidden"
+    >
+      <AuroraGradient width={375} height={375} position={{ top: 50, left: 20 }} colour="#6E9EFF" />
+      <AuroraGradient
+        width={425}
+        height={425}
+        position={{ bottom: 50, right: 50 }}
+        colour="#66FFCC"
+      />
+      {/* TODO:Shane - padding could get moved to the Stack ^ */}
       <Box p={1}>
-        <AuroraGradient
-          width={375}
-          height={375}
-          position={{ top: 90, left: 40 }}
-          colour="#6E9EFF"
-        />
-        <AuroraGradient
-          width={425}
-          height={425}
-          position={{ bottom: 0, right: 0 }}
-          colour="#66FFCC"
-        />
         {/* TODO:Shane - Adjust alignment on smaller viewports. */}
         <Typography fontSize={20} fontWeight={400} fontStyle={'italic'}>
           Hi there!!

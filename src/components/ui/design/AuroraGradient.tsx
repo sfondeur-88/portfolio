@@ -18,19 +18,20 @@ const AuroraGradient = (props: Props) => {
   return (
     <Box
       sx={{
-        position: 'absolute',
+        position: 'fixed',
         width: `${props.width}px`,
         height: `${props.height}px`,
         borderRadius: '50%',
         background: `radial-gradient(circle at 70% 70%, ${props.colour}, transparent 70%)`,
         boxSizing: 'border-box',
-        filter: 'blur(100px)',
+        filter: 'blur(150px)',
         opacity: 0.6,
         zIndex: 0,
         top: props.position.top,
         left: props.position.left,
         right: props.position.right,
         bottom: props.position.bottom,
+        pointerEvents: 'none',
       }}
     />
   );

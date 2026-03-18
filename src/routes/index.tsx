@@ -18,8 +18,9 @@ export const router = createBrowserRouter([
           { path: 'welcome', element: <Welcome /> },
           { path: 'about-me', element: <AboutMe /> },
           { path: 'experience', element: <Experience /> },
-          // Uses/Setup - Showing dev setup, tools, stack preferences
-          // Blog/Notes - A few posts on things i've learned. (Communication, Arch, Teamwork, w/e)
+          // TODO:Shane - Other route ideas:
+          // Config/Uses/Setup - Showing dev setup, tools, config files (tsconfig, eslint, prettier, could be a new "folder" in explorer panel)
+          // Blog/Notes - A few posts on things i've learned. (Communication, PR's, Arch, Teamwork, Declarative BE vs FE react functional)
           // Component Sandbox - Show off the things i built for the portfolio. Code snippets & playground?
         ],
       },

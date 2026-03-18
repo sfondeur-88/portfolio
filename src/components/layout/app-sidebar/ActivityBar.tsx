@@ -30,6 +30,9 @@ const iconButtonSx = {
   },
 };
 
+// TODO:Shane
+// Light/Dark toggle button
+
 const ActivityBar = (props: ActivityBarProps) => {
   const { activePanel, onTogglePanel } = props;
 
@@ -45,7 +48,7 @@ const ActivityBar = (props: ActivityBarProps) => {
         flexDirection: 'column',
         alignItems: 'center',
         borderColor: 'divider',
-        paddingY: 0.5,
+        paddingY: 1,
         gap: 0.5,
       }}
     >

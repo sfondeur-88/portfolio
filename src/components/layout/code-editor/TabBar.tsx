@@ -12,9 +12,13 @@ type TabItems = {
 };
 
 const tabItems: TabItems[] = [
-  { label: 'Welcome.tsx', path: ROUTE_PATHS.WELCOME, icon: <WavingHand /> },
-  { label: 'AboutMe.tsx', path: ROUTE_PATHS.ABOUT_ME, icon: <Mood /> },
-  { label: 'Experience.tsx', path: ROUTE_PATHS.EXPERIENCE, icon: <TerminalOutlined /> },
+  { label: 'Welcome.tsx', path: ROUTE_PATHS.WELCOME, icon: <WavingHand fontSize="small" /> },
+  { label: 'AboutMe.tsx', path: ROUTE_PATHS.ABOUT_ME, icon: <Mood fontSize="small" /> },
+  {
+    label: 'Experience.tsx',
+    path: ROUTE_PATHS.EXPERIENCE,
+    icon: <TerminalOutlined fontSize="small" />,
+  },
 ];
 
 const TabBar = () => {

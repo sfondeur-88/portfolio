@@ -5,13 +5,6 @@ import { useLocation } from 'react-router';
 import ActivityBar, { TogglePanelId } from './ActivityBar';
 import ExplorerPanel from './ExplorerPanel';
 
-// 📄 Explorer — toggles sidebar
-// 🔍 Search — command palette / jump to section
-// 🐙 GitHub — external link
-// 👤 LinkedIn — external link
-// 🎮 Extensions — easter egg hobbies panel
-//    Dark/Light/Theme mode - toggle?
-
 const AppSidebar = () => {
   const { pathname } = useLocation();
 

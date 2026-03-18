@@ -10,7 +10,7 @@ function App() {
       <CssBaseline />
       <div
         style={{
-          height: 'calc(100vh - 8px)', // 4px padding on body.
+          height: 'calc(100vh - 16px)', // 4px padding on body.
           display: 'flex',
           flexDirection: 'column',
           borderRadius: '8px',
