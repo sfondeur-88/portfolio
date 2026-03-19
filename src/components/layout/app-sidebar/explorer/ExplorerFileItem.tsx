@@ -1,3 +1,4 @@
+import ReactIcon from '@/components/ui/icons/ReactIcon';
 import { useNavigateToSection } from '@/hooks/useNavigateToSection';
 import { Theme } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -12,7 +13,7 @@ interface Props {
   depth: number;
 }
 
-// TODO:Shane - file starting icon/logo needed (react, ts, etc).
+// For "skip to" sections - MoveDown, DoubleArrow, KeyboardDouble
 const ExplorerFileItem = (props: Props) => {
   const { file, depth } = props;
 
@@ -21,34 +22,50 @@ const ExplorerFileItem = (props: Props) => {
   const { goToSection } = useNavigateToSection();
 
   const isActive = pathname === file.path;
+  const hasSections = file.sections && file.sections.length > 0;
 
   return (
     <Box key={file.path}>
       <Box
         onClick={() => navigate(file.path)}
-        sx={[treeItemSx, { ml: `${INDENT_PX * depth + 45}px` }, isActive && activeFileSx]}
+        sx={[
+          treeItemSx,
+          { fontSize: 14, ml: `${INDENT_PX * depth + 45}px` },
+          isActive && activeFileSx,
+        ]}
       >
+        <ReactIcon fontSize="inherit" />
         <Typography variant="bodySmall">{file.label}</Typography>
       </Box>
 
-      {isActive &&
-        file.sections?.map((section) => (
-          <Box
-            key={section.id}
-            onClick={() => goToSection(file.path, section.id, pathname)}
-            sx={[treeItemSx, { ml: `${INDENT_PX * (depth + 1)}px` }]}
-          >
-            <Typography variant="body" color="text.secondary">
-              {section.label}
-            </Typography>
-          </Box>
-        ))}
+      <>
+        {hasSections &&
+          file.sections?.map((section) => (
+            <Box
+              key={section.id}
+              onClick={() => goToSection(file.path, section.id, pathname)}
+              sx={[
+                treeItemSx,
+                {
+                  ml: `${INDENT_PX * (depth + 1) + 49}px`,
+                  color: 'text.secondary',
+                  '&:hover': { ...activeFileSx },
+                },
+              ]}
+            >
+              <Typography variant="caption" sx={{ color: '#505050' }}>
+                #
+              </Typography>
+              <Typography variant="caption">{section.label}</Typography>
+            </Box>
+          ))}
+      </>
     </Box>
   );
 };
 
 const activeFileSx: SystemStyleObject<Theme> = {
-  backgroundColor: 'action.selected',
+  // backgroundColor: 'action.selected',
   color: 'text.primary',
 };
 

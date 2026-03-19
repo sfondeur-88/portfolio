@@ -41,14 +41,33 @@ export const explorerTree: ExplorerTree = {
           type: 'folder',
           label: 'about-me',
           children: [
-            { type: 'file', label: 'AboutMe.tsx', path: ROUTE_PATHS.ABOUT_ME, sections: [] },
+            {
+              type: 'file',
+              label: 'AboutMe.tsx',
+              path: ROUTE_PATHS.ABOUT_ME,
+              sections: [
+                { id: 'intro', label: 'intro' },
+                { id: 'origin-story', label: 'origin-story' },
+                { id: 'stack', label: 'stack' },
+                { id: 'education', label: 'education' },
+              ],
+            },
           ],
         },
         {
           type: 'folder',
           label: 'experience',
           children: [
-            { type: 'file', label: 'Experience.tsx', path: ROUTE_PATHS.EXPERIENCE, sections: [] },
+            {
+              type: 'file',
+              label: 'Experience.tsx',
+              path: ROUTE_PATHS.EXPERIENCE,
+              sections: [
+                { id: 'gryd', label: 'gryd' },
+                { id: 'hoot', label: 'hoot' },
+                { id: 'eq3', label: 'eq3' },
+              ],
+            },
           ],
         },
       ],

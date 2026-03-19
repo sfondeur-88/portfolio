@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { useEffect } from 'react';
 
 const AboutMe = () => {
@@ -6,23 +6,27 @@ const AboutMe = () => {
     document.title = "About Me | Shane's Dev Portfolio";
   }, []);
 
-  // TODO:Shane
-  //
-  // ▼ about-me
-  //   ▼ personal
-  //       bio.md
-  //       interests.md
-  //   ▼ background
-  //       origin-story.md
-  //       education.md
-
   return (
     <Stack px={3}>
       <article>
-        {/* Bio/Intro */}
-        <section>
-          <h1>Bio/Intro</h1>
-          <p>LoremIpsum</p>
+        <section id="intro">
+          <Typography variant="h1">Bio/Intro</Typography>
+          <Typography>Lorem ipsum</Typography>
+        </section>
+
+        <section id="origin-story">
+          <Typography variant="h2">Origin Story</Typography>
+          <Typography>Lorem ipsum</Typography>
+        </section>
+
+        <section id="stack">
+          <Typography variant="h2">Stack</Typography>
+          <Typography>Lorem ipsum</Typography>
+        </section>
+
+        <section id="education">
+          <Typography variant="h2">Education</Typography>
+          <Typography>Lorem ipsum</Typography>
         </section>
       </article>
     </Stack>

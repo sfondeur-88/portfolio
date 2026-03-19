@@ -26,6 +26,8 @@ const ExplorerContent = () => {
       >
         EXPLORER
       </Typography>
+
+      {/* Root  `> shane_fondeur` */}
       <Box
         onClick={() => setRootFolderOpen((prev) => !prev)}
         sx={[treeItemSx, { ml: `${INDENT_PX}px` }]}
@@ -40,6 +42,7 @@ const ExplorerContent = () => {
         </Typography>
       </Box>
 
+      {/* 2nd level folders (/pages, etc) */}
       <Collapse in={rootFolderOpen}>
         {explorerTree.folders.map((folder) => renderNode(folder, 2))}
       </Collapse>

@@ -71,6 +71,7 @@ const ActivityBar = (props: ActivityBarProps) => {
                 borderLeft: '2px solid',
                 borderColor: activePanel === id ? 'primary.main' : 'transparent',
                 color: activePanel === id ? 'text.primary' : 'grey',
+                // TODO:Shane - make the bg stand out more, or remove. (Its too subtle atm)
                 backgroundColor: activePanel === id ? 'action.selected' : 'transparent',
               }}
             >

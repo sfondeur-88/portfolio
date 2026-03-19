@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 
-// Updates the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     title: true;
@@ -28,7 +27,6 @@ declare module '@mui/material/styles' {
     tag: React.CSSProperties;
   }
 
-  // allows configuration using `createTheme()`
   interface TypographyVariantsOptions {
     title?: React.CSSProperties;
     subtitle?: React.CSSProperties;
@@ -45,6 +43,7 @@ declare module '@mui/material/styles' {
 export enum Colours {
   Blue = '#4B59C9',
   Orange = '#CC837C',
+  Raspberry = '#AA314D',
 }
 
 const theme = createTheme({
@@ -55,14 +54,14 @@ const theme = createTheme({
     secondary: {
       main: '#C678DD',
     },
+    text: {
+      primary: '#FFFFFF',
+      secondary: '#808080', // darker version: #505050
+    },
+    divider: '#293B4D', // brighter version: #4a6882
     background: {
       default: '#021628',
       paper: '#021628',
-    },
-    divider: '#293B4D',
-    text: {
-      primary: '#FFFFFF',
-      secondary: '#808080',
     },
   },
   typography: {

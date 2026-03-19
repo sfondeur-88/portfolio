@@ -15,4 +15,5 @@ export const treeItemSx: SystemStyleObject<Theme> = {
   userSelect: 'none',
   whiteSpace: 'nowrap',
   '&:hover': { color: 'text.primary' },
+  // '& .MuiSvgIcon-root': { color: 'text.primary' },
 };
