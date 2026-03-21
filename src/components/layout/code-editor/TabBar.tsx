@@ -3,7 +3,7 @@ import { Box, Stack, Tab, Tabs as TabItems } from '@mui/material';
 import { ReactElement } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { ROUTE_PATHS } from '../../../routes/paths';
-import { HEADER_HEIGHT } from '../../../utils/layout';
+import { TAB_BAR_HEIGHT } from '../../../utils/layout';
 
 type TabItems = {
   label: string;
@@ -34,7 +34,7 @@ const TabBar = () => {
     <Box
       component="header"
       sx={{
-        height: HEADER_HEIGHT,
+        height: TAB_BAR_HEIGHT,
         borderTop: '1px solid',
         borderBottom: '1px solid',
         borderColor: 'divider',
@@ -48,9 +48,9 @@ const TabBar = () => {
           onChange={handleTabChange}
           aria-label="tab-group"
           sx={{
-            height: HEADER_HEIGHT,
+            height: TAB_BAR_HEIGHT,
             '& .MuiTabs-list > .MuiTab-root': {
-              minHeight: HEADER_HEIGHT,
+              minHeight: TAB_BAR_HEIGHT,
               textTransform: 'inherit',
               borderRight: '1px solid',
               borderRightColor: 'divider',

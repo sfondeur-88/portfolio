@@ -14,6 +14,7 @@ const Footer = () => {
       component="footer"
       sx={{
         height: FOOTER_HEIGHT,
+        flexShrink: 0,
         zIndex: 1000,
         border: '1px solid',
         borderColor: 'divider',

@@ -1,5 +1,6 @@
 import TrafficLightButton from '@/components/ui/design/TrafficLightButton';
 import FullscreenIcon from '@/components/ui/icons/FullscreenIcon';
+import { HEADER_HEIGHT } from '@/utils/layout';
 import { Close, Remove } from '@mui/icons-material';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -11,9 +12,11 @@ const Header = () => {
 
   return (
     <Box
+      component="header"
       sx={{
-        height: 40,
+        height: HEADER_HEIGHT,
         display: 'flex',
+        flexShrink: 0,
         alignItems: 'center',
         position: 'relative',
         paddingX: 1.5,

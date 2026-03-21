@@ -1,3 +1,5 @@
+import { ABOUT_ME_SECTIONS } from '@/features/about-me/AboutMe';
+import { EXPERIENCE_SECTIONS } from '@/features/experience/Experience';
 import { ROUTE_PATHS } from '@/routes/paths';
 
 type ExplorerType = 'file' | 'folder';
@@ -25,6 +27,10 @@ interface ExplorerTree {
   folders: ExplorerFolder[];
 }
 
+// TODO:Shane
+// - /assets     - resume, other images?
+// - /components - for the component playground/sandbox?
+// - /utils      - other utilities or patterns i like to use?
 export const explorerTree: ExplorerTree = {
   rootLabel: 'shane_fondeur',
   folders: [
@@ -45,12 +51,7 @@ export const explorerTree: ExplorerTree = {
               type: 'file',
               label: 'AboutMe.tsx',
               path: ROUTE_PATHS.ABOUT_ME,
-              sections: [
-                { id: 'intro', label: 'intro' },
-                { id: 'origin-story', label: 'origin-story' },
-                { id: 'stack', label: 'stack' },
-                { id: 'education', label: 'education' },
-              ],
+              sections: [...ABOUT_ME_SECTIONS],
             },
           ],
         },
@@ -62,11 +63,7 @@ export const explorerTree: ExplorerTree = {
               type: 'file',
               label: 'Experience.tsx',
               path: ROUTE_PATHS.EXPERIENCE,
-              sections: [
-                { id: 'gryd', label: 'gryd' },
-                { id: 'hoot', label: 'hoot' },
-                { id: 'eq3', label: 'eq3' },
-              ],
+              sections: [...EXPERIENCE_SECTIONS],
             },
           ],
         },

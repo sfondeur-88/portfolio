@@ -2,7 +2,7 @@ import AppSidebar from '../app-sidebar/AppSidebar';
 import CodeEditor from '../code-editor/CodeEditor';
 
 const PageLayout = () => {
-  // TODO:Shane - scrollbar
+  // TODO:Shane - scrollbar (CodeEditor.tsx)
   // scrollBehavior: 'smooth',
   // '::-webkit-scrollbar': {
   //   width: '16px',

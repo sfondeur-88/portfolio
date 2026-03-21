@@ -1,4 +1,6 @@
-import { ChevronRight, ExpandMore, FolderOpenRounded, FolderRounded } from '@mui/icons-material';
+import { ChevronRight } from '@mui/icons-material';
+import FolderOpenRounded from '@mui/icons-material/FolderOpenRounded';
+import FolderRounded from '@mui/icons-material/FolderRounded';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
@@ -42,26 +44,32 @@ const ExplorerFolderItem = (props: Props) => {
           content: '""',
           opacity: showIndentGuide && isOpen && isActive ? 1 : 0,
           width: '1.5px',
+          height: 'auto',
           position: 'absolute',
           left: `${INDENT_PX * depth + 11.47}px`,
           top: '28px',
           bottom: 0,
           backgroundColor: '#4a6882',
-          transition: 'opacity 0.2s ease',
+          transformOrigin: 'top',
+          transform: isOpen ? 'scaleY(1)' : 'scaleY(0)',
+          transition: isOpen
+            ? 'transform 250ms ease 50ms, opacity 200ms ease 50ms'
+            : 'transform 300ms ease 50ms, opacity 150ms ease-out 50ms',
         },
       }}
     >
       <Box onClick={toggleFolder} sx={[treeItemSx, { ml: `${INDENT_PX * depth}px` }]}>
+        <ChevronRight
+          sx={{
+            color: 'text.secondary',
+            transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+            transition: 'transform 100ms ease-in-out',
+          }}
+        />
         {isOpen ? (
-          <>
-            <ExpandMore sx={{ color: 'text.secondary' }} />
-            <FolderOpenRounded sx={{ color: 'primary.main' }} />
-          </>
+          <FolderOpenRounded sx={{ color: 'primary.main' }} />
         ) : (
-          <>
-            <ChevronRight sx={{ color: 'text.secondary' }} />
-            <FolderRounded sx={{ color: 'primary.main' }} />
-          </>
+          <FolderRounded sx={{ color: 'primary.main' }} />
         )}
         <Typography variant="body">{folder.label}</Typography>
       </Box>

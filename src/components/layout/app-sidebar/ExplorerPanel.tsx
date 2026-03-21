@@ -12,7 +12,7 @@ const ExplorerPanel = ({ activePanel }: ExplorerPanelProps) => {
     <Box
       sx={{
         width: activePanel ? 280 : 0,
-        overflow: 'hidden',
+        // TODO:Shane - decide if we need: overflow: 'hidden' still
         borderRight: '1px solid',
         borderColor: 'divider',
         backgroundColor: 'background.default',

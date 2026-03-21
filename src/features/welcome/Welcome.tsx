@@ -16,13 +16,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <Stack
-      height="100%"
-      justifyContent="center"
-      alignItems="center"
-      position="relative"
-      overflow="hidden"
-    >
+    <Stack height="100%" justifyContent="center" alignItems="center" position="relative">
       <AuroraGradient width={375} height={375} position={{ top: 50, left: 20 }} colour="#6E9EFF" />
       <AuroraGradient
         width={425}
