@@ -5,8 +5,8 @@ import { ReactNode } from 'react';
 type TokenType = 'keyword' | 'variable' | 'string';
 
 const TOKEN_COLOURS: Record<TokenType, string> = {
-  keyword: Colours.Blue,
-  variable: theme.palette.primary.main,
+  keyword: theme.palette.primary.main,
+  variable: Colours.Blue,
   string: Colours.Orange,
 };
 

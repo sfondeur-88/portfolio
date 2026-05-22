@@ -41,9 +41,16 @@ declare module '@mui/material/styles' {
 }
 
 export enum Colours {
-  Blue = '#4B59C9',
-  Orange = '#CC837C',
+  Blue = '#356ac5',
+  LightBlue = '#79C8E2', // object keys (slightly lighter/cooler)
   Raspberry = '#AA314D',
+  Pink = '#e06c6e', // braces { }
+  Orange = '#CC837C',
+  CommentGreen = '#579839',
+  LightGreen = '#4ed474',
+  Yellow = '#e5c44e', // array brackets [ ]
+  Punctuation = '#ABB2BF', // white-ish punctuation in code (:,=)
+  SnippetBackground = '#141414',
 }
 
 const theme = createTheme({
@@ -97,7 +104,6 @@ const theme = createTheme({
     code: {
       fontSize: '14px',
       fontWeight: 300,
-      fontStyle: 'italic',
     },
     tag: {
       fontSize: '12px',

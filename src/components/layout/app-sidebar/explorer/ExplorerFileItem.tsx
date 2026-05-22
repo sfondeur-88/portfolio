@@ -1,4 +1,4 @@
-import ReactIcon from '@/components/ui/icons/ReactIcon';
+import { ReactIcon } from '@/components/ui/icons/ReactIcon';
 import { useNavigateToSection } from '@/hooks/useNavigateToSection';
 import { Theme } from '@mui/material';
 import Box from '@mui/material/Box';

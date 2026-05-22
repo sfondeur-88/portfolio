@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
-import { useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 const LINE_HEIGHT = 22;
+const LINE_COUNT_DEFAULT = 22;
 
 interface LineNumberGutterProps {
   children: React.ReactNode;
@@ -9,20 +10,25 @@ interface LineNumberGutterProps {
 
 const LineNumberGutter = ({ children }: LineNumberGutterProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
-  // TODO:Shane - Plan the line number feature again, or use static values.
-  // const [lineCount, setLineCount] = useState<number>(50);
+  const [lineCount, setLineCount] = useState<number>(LINE_COUNT_DEFAULT);
 
-  // useEffect(() => {
-  //   if (!contentRef.current) return;
+  useLayoutEffect(() => {
+    if (!contentRef.current) return;
 
-  //   const observer = new ResizeObserver(() => {
-  //     if (!contentRef.current) return;
-  //     setLineCount(Math.ceil(contentRef.current.scrollHeight / LINE_HEIGHT));
-  //   });
+    const updateLineCount = () => {
+      if (!contentRef.current) return;
+      // Adds a small buffer
+      const totalLines = Math.ceil(contentRef.current.scrollHeight / LINE_HEIGHT) + 2;
+      setLineCount(Math.max(LINE_COUNT_DEFAULT, totalLines)); // Fallback.
+    };
 
-  //   observer.observe(contentRef.current);
-  //   return () => observer.disconnect();
-  // }, []);
+    updateLineCount();
+
+    const observer = new ResizeObserver(updateLineCount);
+    observer.observe(contentRef.current);
+
+    return () => observer.disconnect();
+  }, [children]);
 
   return (
     <Box
@@ -43,7 +49,7 @@ const LineNumberGutter = ({ children }: LineNumberGutterProps) => {
           opacity: 0.6,
         }}
       >
-        {Array.from({ length: 70 }, (_, i) => (
+        {Array.from({ length: lineCount }, (_, i) => (
           <Box key={i}>{i + 1}</Box>
         ))}
       </Box>

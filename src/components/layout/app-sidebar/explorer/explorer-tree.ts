@@ -1,5 +1,5 @@
-import { ABOUT_ME_SECTIONS } from '@/features/about-me/AboutMe';
-import { EXPERIENCE_SECTIONS } from '@/features/experience/Experience';
+import { ABOUT_ME_SECTIONS } from '@/features/about-me/about-me-sections';
+import { EXPERIENCE_SECTIONS } from '@/features/experience/experience-sections';
 import { ROUTE_PATHS } from '@/routes/paths';
 
 type ExplorerType = 'file' | 'folder';

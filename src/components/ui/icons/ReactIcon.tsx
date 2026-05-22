@@ -1,6 +1,6 @@
 import { SvgIcon, SvgIconProps } from '@mui/material';
 
-const ReactIcon = (props: SvgIconProps) => (
+export const ReactIcon = (props: SvgIconProps) => (
   <SvgIcon viewBox="0 0 100 100" fill="none" {...props}>
     <path fill="#61dafb" d="M50.307 58.816a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632" />
     <path
@@ -23,5 +23,3 @@ const ReactIcon = (props: SvgIconProps) => (
     />
   </SvgIcon>
 );
-
-export default ReactIcon;

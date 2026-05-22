@@ -11,6 +11,8 @@ function App() {
       <div
         style={{
           height: 'calc(100vh - 16px)', // <body> has 8px padding (16 top & down included) to offset.
+          maxWidth: '1700px',
+          margin: 'auto',
           display: 'flex',
           flexDirection: 'column',
           borderRadius: '8px',
