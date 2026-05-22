@@ -24,7 +24,6 @@ const Welcome = () => {
         position={{ bottom: 50, right: 50 }}
         colour="#66FFCC"
       />
-      {/* TODO:Shane - padding could get moved to the Stack ^ */}
       <Box p={1}>
         {/* TODO:Shane - Adjust alignment on smaller viewports. */}
         <Typography fontSize={20} fontWeight={400} fontStyle={'italic'}>

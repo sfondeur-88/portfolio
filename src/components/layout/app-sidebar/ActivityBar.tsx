@@ -7,7 +7,6 @@ const ACTIVITY_BAR_WIDTH = 56;
 
 export type TogglePanelId = 'explorer' | 'extensions';
 
-// TODO:Shane - Icons can be a bit bigger.. maybe 28px -> 32px ?
 const toggleItems = [
   { id: 'explorer' as TogglePanelId, icon: <FileCopyRounded />, label: 'Explorer' },
   { id: 'extensions' as TogglePanelId, icon: <WidgetsRounded />, label: 'Hobbies' },
@@ -29,9 +28,6 @@ const iconButtonSx = {
     color: 'text.primary',
   },
 };
-
-// TODO:Shane
-// Light/Dark toggle button
 
 const ActivityBar = (props: ActivityBarProps) => {
   const { activePanel, onTogglePanel } = props;

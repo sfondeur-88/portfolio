@@ -27,10 +27,6 @@ interface ExplorerTree {
   folders: ExplorerFolder[];
 }
 
-// TODO:Shane
-// - /assets     - resume, other images?
-// - /components - for the component playground/sandbox?
-// - /utils      - other utilities or patterns i like to use?
 export const explorerTree: ExplorerTree = {
   rootLabel: 'shane_fondeur',
   folders: [
