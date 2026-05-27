@@ -7,7 +7,9 @@ import {
   SxProps,
   Theme,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
+import theme from '@/theme';
 
 interface Props extends Omit<SnackbarProps, 'message'> {
   message: string;
@@ -15,11 +17,12 @@ interface Props extends Omit<SnackbarProps, 'message'> {
 
 const Snackbar = (props: Props) => {
   const { message, slotProps } = props;
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <MuiSnackbar
       autoHideDuration={3500}
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      anchorOrigin={isMobile ? { vertical: 'top', horizontal: 'center' } : { vertical: 'bottom', horizontal: 'right' }}
       slots={{ transition: Slide }}
       {...props}
       slotProps={{
