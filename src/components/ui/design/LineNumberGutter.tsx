@@ -45,10 +45,11 @@ const LineNumberGutter = ({ children }: LineNumberGutterProps) => {
       cancelAnimationFrame(raf);
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return (
     <Box
+      id="scroll-container"
       ref={scrollRef}
       sx={{
         display: 'flex',

@@ -35,6 +35,12 @@ const HootReadingSection = () => {
           <span style={{ color: Colours.Pink }}>{'{'}</span>
           {'\n'}
           {'  '}
+          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;education-tech&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.LightBlue }}>url</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
           <Link
@@ -50,6 +56,41 @@ const HootReadingSection = () => {
           <span style={{ color: Colours.CommentGreen }}>{` // <- clickable! `}</span>
           {'\n'}
           {'  '}
+          <span style={{ color: Colours.LightBlue }}>product</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Yellow }}>{'['}</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;literacy&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;reading assessments&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;tutoring&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;saas&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;b2b&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.Yellow }}>{']'}</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.LightBlue }}>teamSize</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;medium (~12 members)&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.LightBlue }}>role</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
           <span style={{ color: Colours.Orange }}>&apos;Software Engineer&apos;</span>
@@ -62,15 +103,9 @@ const HootReadingSection = () => {
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           {'  '}
-          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.LightBlue }}>type</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;education-tech&apos;</span>
-          <span style={{ color: Colours.Punctuation }}>;</span>
-          {'\n'}
-          {'  '}
-          <span style={{ color: Colours.LightBlue }}>business</span>
-          <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;literacy/tutoring&apos;</span>
+          <span style={{ color: Colours.Orange }}>&apos;full-time, remote&apos;</span>
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           <span style={{ color: Colours.Pink }}>{'}'}</span>

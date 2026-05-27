@@ -60,7 +60,6 @@ const ExplorerFileItem = (props: Props) => {
 };
 
 const activeFileSx: SystemStyleObject<Theme> = {
-  // backgroundColor: 'action.selected',
   color: 'text.primary',
 };
 

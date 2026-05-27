@@ -16,10 +16,15 @@ const ExplorerPanel = ({ activePanel }: ExplorerPanelProps) => {
         borderColor: '#1d2a37',
         backgroundColor: 'background.default',
         transition: 'width 0.15s ease',
+        overflow: 'hidden',
       }}
     >
-      {activePanel === 'explorer' && <ExplorerContent />}
-      {activePanel === 'extensions' && <ExtensionsContent />}
+      <Box sx={{ width: 280, display: activePanel === 'explorer' ? 'block' : 'none' }}>
+        <ExplorerContent />
+      </Box>
+      <Box sx={{ width: 280, display: activePanel === 'extensions' ? 'block' : 'none' }}>
+        <ExtensionsContent />
+      </Box>
     </Box>
   );
 };

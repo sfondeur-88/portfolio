@@ -35,6 +35,12 @@ const EQ3Section = () => {
           <span style={{ color: Colours.Pink }}>{'{'}</span>
           {'\n'}
           {'  '}
+          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;e-commerce&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.LightBlue }}>url</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
           <Link
@@ -50,14 +56,54 @@ const EQ3Section = () => {
           <span style={{ color: Colours.CommentGreen }}>{` // <- clickable! `}</span>
           {'\n'}
           {'  '}
+          <span style={{ color: Colours.LightBlue }}>product</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Yellow }}>{'['}</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;furniture&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;retail&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;custom made&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;b2c&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.Yellow }}>{']'}</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.LightBlue }}>teamSize</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;medium (~20 members)&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.LightBlue }}>roles</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
           <span style={{ color: Colours.Yellow }}>{'['}</span>
+          {'\n'}
+          {'    '}
           <span style={{ color: Colours.Orange }}>&apos;Intern&apos;</span>
-          <span style={{ color: Colours.Punctuation }}>, </span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
           <span style={{ color: Colours.Orange }}>&apos;Junior Developer&apos;</span>
-          <span style={{ color: Colours.Punctuation }}>, </span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
           <span style={{ color: Colours.Orange }}>&apos;Intermediate Developer&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.Yellow }}>{']'}</span>
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
@@ -68,15 +114,9 @@ const EQ3Section = () => {
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           {'  '}
-          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.LightBlue }}>type</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;e-commerce&apos;</span>
-          <span style={{ color: Colours.Punctuation }}>;</span>
-          {'\n'}
-          {'  '}
-          <span style={{ color: Colours.LightBlue }}>business</span>
-          <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;furniture&apos;</span>
+          <span style={{ color: Colours.Orange }}>&apos;full-time, remote&apos;</span>
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           <span style={{ color: Colours.Pink }}>{'}'}</span>

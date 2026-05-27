@@ -37,6 +37,12 @@ const GrydSection = () => {
           <span style={{ color: Colours.Pink }}>{'{'}</span>
           {'\n'}
           {'  '}
+          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;property-tech&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
           <span style={{ color: Colours.LightBlue }}>urls</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
           <span style={{ color: Colours.Yellow }}>{'['}</span>
@@ -61,7 +67,37 @@ const GrydSection = () => {
           {'  '}
           <span style={{ color: Colours.Yellow }}>{']'}</span>
           <span style={{ color: Colours.Punctuation }}>;</span>
-
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.LightBlue }}>product</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Yellow }}>{'['}</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;parking&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;3D rendering&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;saas&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'    '}
+          <span style={{ color: Colours.Orange }}>&apos;b2b&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>,</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.Yellow }}>{']'}</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
+          {'\n'}
+          {'  '}
+          <span style={{ color: Colours.LightBlue }}>teamSize</span>
+          <span style={{ color: Colours.Punctuation }}>: </span>
+          <span style={{ color: Colours.Orange }}>&apos;small (~7 members)&apos;</span>
+          <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           {'  '}
           <span style={{ color: Colours.LightBlue }}>role</span>
@@ -76,15 +112,9 @@ const GrydSection = () => {
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           {'  '}
-          <span style={{ color: Colours.LightBlue }}>industry</span>
+          <span style={{ color: Colours.LightBlue }}>type</span>
           <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;property-tech&apos;</span>
-          <span style={{ color: Colours.Punctuation }}>;</span>
-          {'\n'}
-          {'  '}
-          <span style={{ color: Colours.LightBlue }}>business</span>
-          <span style={{ color: Colours.Punctuation }}>: </span>
-          <span style={{ color: Colours.Orange }}>&apos;parking/property&apos;</span>
+          <span style={{ color: Colours.Orange }}>&apos;full-time, remote&apos;</span>
           <span style={{ color: Colours.Punctuation }}>;</span>
           {'\n'}
           <span style={{ color: Colours.Pink }}>{'}'}</span>

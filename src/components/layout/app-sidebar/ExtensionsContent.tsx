@@ -18,49 +18,37 @@ const CATEGORY_COLOURS: Record<Category, string> = {
   tools: '#C678DD',
   reading: '#CC837C',
   gaming: '#79C8E2',
-  tabletop: '#e5c44e',
+  tabletop: '#b62626',
 };
 
 const extensions: Extension[] = [
   {
-    icon: <ZapIcon sx={{ fontSize: 32 }} />,
-    title: 'Side Project',
-    description: 'Competitive pokemon team builder and battle app',
+    icon: <ZapIcon sx={{ fontSize: 24 }} />,
+    title: 'Side Projects',
+    description: 'Competitive pokemon team builder and battle app, Local Marketplace app',
     category: 'project',
   },
   {
-    icon: <BuildRounded sx={{ fontSize: 32 }} />,
-    title: "Tools I'm Learning",
-    description: 'Tailwind v4, Biome, Drizzle ORM',
+    icon: <BuildRounded sx={{ fontSize: 24 }} />,
+    title: `Tools I'm Learning`,
+    description: 'Tailwind v4, Drizzle ORM, Supabase, Claude Code (in-depth), Biome',
     category: 'tools',
   },
   {
-    icon: <MenuBookRounded sx={{ fontSize: 32 }} />,
-    title: 'The Phoenix Project',
-    description: 'Currently reading',
+    icon: <MenuBookRounded sx={{ fontSize: 24 }} />,
+    title: `Books I'm Reading`,
+    description: 'The Phoenix Project, Beyond the Aquila Rift, Neuromancer',
     category: 'reading',
   },
   {
-    icon: <MenuBookRounded sx={{ fontSize: 32 }} />,
-    title: 'Beyond the Aquila Rift',
-    description: 'Currently reading',
-    category: 'reading',
-  },
-  {
-    icon: <SportsEsportsRounded sx={{ fontSize: 32 }} />,
-    title: "Baldur's Gate 3",
-    description: 'Currently playing',
+    icon: <SportsEsportsRounded sx={{ fontSize: 24 }} />,
+    title: "Games I'm Playing",
+    description: `Baldur's Gate 3, Dragon Quest I&II HD-2D Remake, Expedition 33`,
     category: 'gaming',
   },
   {
-    icon: <SportsEsportsRounded sx={{ fontSize: 32 }} />,
-    title: 'Dragon Quest I&II HD-2D',
-    description: 'Currently playing',
-    category: 'gaming',
-  },
-  {
-    icon: <D20Icon sx={{ fontSize: 32 }} />,
-    title: 'Dungeon Master',
+    icon: <D20Icon sx={{ fontSize: 24 }} />,
+    title: 'D&D DM',
     description: 'Will be running a D&D campaign for the first time as a DM',
     category: 'tabletop',
   },
@@ -69,12 +57,12 @@ const extensions: Extension[] = [
 const ExtensionRow = ({ icon, title, description, category }: Extension) => {
   const colour = CATEGORY_COLOURS[category];
   return (
-    <Box sx={{ px: 2, py: 1.5, '&:hover': { backgroundColor: 'action.hover' }, cursor: 'default' }}>
-      <Stack direction="row" gap={1.5} alignItems="flex-start">
+    <Box sx={{ px: 2, py: 1, '&:hover': { backgroundColor: 'action.hover' }, cursor: 'default' }}>
+      <Stack direction="row" gap={1} alignItems="flex-start">
         <Box
           sx={{
-            width: 40,
-            height: 40,
+            width: 24,
+            height: 24,
             flexShrink: 0,
             display: 'flex',
             alignItems: 'center',
@@ -85,19 +73,18 @@ const ExtensionRow = ({ icon, title, description, category }: Extension) => {
           {icon}
         </Box>
 
-        <Stack flex={1} minWidth={0} gap={0.5}>
+        <Stack flex={1} minWidth={0}>
           <Typography variant="bodySmall" fontWeight={700}>
             {title}
           </Typography>
-          <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-            <Typography variant="caption" color="text.secondary" sx={{ lineHeight: 1.4 }}>
-              {description}
-            </Typography>
+          <Typography variant="caption" color="text.secondary" sx={{ lineHeight: 1.4 }}>
+            {description}
+          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 0.5 }}>
             <Chip
               label={category}
               size="small"
               sx={{
-                flexShrink: 0,
                 height: 20,
                 fontSize: '10px',
                 fontFamily: 'inherit',
@@ -109,7 +96,7 @@ const ExtensionRow = ({ icon, title, description, category }: Extension) => {
                 '& .MuiChip-label': { px: '6px' },
               }}
             />
-          </Stack>
+          </Box>
         </Stack>
       </Stack>
     </Box>

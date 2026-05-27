@@ -22,8 +22,8 @@ const AboutMe = () => {
           sx={{
             padding: 1,
             mb: 3,
-            backgroundColor: '#141414',
-            border: '1px solid #141414',
+            backgroundColor: Colours.SnippetBackground,
+            border: `1px solid ${Colours.SnippetBackground}`,
             borderRadius: '16px',
             overflowX: 'auto',
             maxWidth: '100%',
@@ -113,8 +113,8 @@ const AboutMe = () => {
           sx={{
             padding: 1,
             mb: 3,
-            backgroundColor: '#141414',
-            border: '1px solid #141414',
+            backgroundColor: Colours.SnippetBackground,
+            border: `1px solid ${Colours.SnippetBackground}`,
             borderRadius: '16px',
             overflowX: 'auto',
             maxWidth: '100%',
@@ -260,7 +260,7 @@ const ColorSpan = ({ c, children }: { c: string; children: React.ReactNode }) =>
   <span style={{ color: c }}>{children}</span>
 );
 const WhitePunctuation = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: '#ABB2BF' }}>{children}</span>
+  <span style={{ color: Colours.Punctuation }}>{children}</span>
 );
 
 export default AboutMe;
