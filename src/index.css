@@ -110,6 +110,5 @@ body {
 @media (max-width: 600px) {
   body {
     padding: 0;
-    padding-bottom: env(safe-area-inset-bottom);
   }
 }

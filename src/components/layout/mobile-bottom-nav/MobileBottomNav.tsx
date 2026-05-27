@@ -24,14 +24,14 @@ const MobileBottomNav = () => {
       component="nav"
       aria-label="Mobile navigation"
       sx={{
-        height: MOBILE_NAV_HEIGHT,
+        minHeight: MOBILE_NAV_HEIGHT,
+        paddingBottom: 'env(safe-area-inset-bottom)',
         flexShrink: 0,
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         borderTop: '1px solid',
         borderColor: 'divider',
         backgroundColor: 'background.default',
-        overflow: 'hidden',
       }}
     >
       <Stack direction="row" alignItems="center" flex={1} height="100%">
