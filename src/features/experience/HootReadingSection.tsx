@@ -6,7 +6,7 @@ import { NestJsIcon } from '@/components/ui/icons/NestJsIcon';
 import { PostgresIcon } from '@/components/ui/icons/PostgresIcon';
 import { ReactIcon } from '@/components/ui/icons/ReactIcon';
 import { TailwindIcon } from '@/components/ui/icons/TailwindIcon';
-import { TypeScriptIcon } from '@/components/ui/icons/TypescriptIcon';
+import { TypeScriptIcon } from '@/components/ui/icons/TypeScriptIcon';
 import { Colours } from '@/theme';
 import { LinkHrefs } from '@/utils/links';
 import { Box, Grid, Link } from '@mui/material';

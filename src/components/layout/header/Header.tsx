@@ -6,10 +6,6 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 
 const Header = () => {
-  const onTrafficLightClick = () => {
-    // TODO:Shane - Easter egg when clicked?
-  };
-
   return (
     <Box
       component="header"
@@ -31,13 +27,9 @@ const Header = () => {
       }}
     >
       <Box sx={{ display: 'flex', gap: 1.5, padding: 1, '&:hover svg': { opacity: 1 } }}>
-        <TrafficLightButton colour="#FF5252" handleClick={onTrafficLightClick} icon={<Close />} />
-        <TrafficLightButton colour="#FFBC42" handleClick={onTrafficLightClick} icon={<Remove />} />
-        <TrafficLightButton
-          colour="#2DBF2D"
-          handleClick={onTrafficLightClick}
-          icon={<FullscreenIcon />}
-        />
+        <TrafficLightButton colour="#FF5252" icon={<Close />} />
+        <TrafficLightButton colour="#FFBC42" icon={<Remove />} />
+        <TrafficLightButton colour="#2DBF2D" icon={<FullscreenIcon />} />
       </Box>
 
       <Box
@@ -47,7 +39,7 @@ const Header = () => {
           transform: 'translateX(-50%)',
           display: 'flex',
           alignItems: 'center',
-          paddingX: 5,
+          paddingX: { xs: '20px', sm: 5 },
           paddingY: '2px',
           border: '1px solid',
           borderColor: '#1d2a37',

@@ -6,7 +6,7 @@ import { MaterialUiIcon } from '@/components/ui/icons/MaterialUiIcon';
 import { NextJsIcon } from '@/components/ui/icons/NextJsIcon';
 import { ReactIcon } from '@/components/ui/icons/ReactIcon';
 import { SpringBootIcon } from '@/components/ui/icons/SpringBootIcon';
-import { TypeScriptIcon } from '@/components/ui/icons/TypescriptIcon';
+import { TypeScriptIcon } from '@/components/ui/icons/TypeScriptIcon';
 import { Colours } from '@/theme';
 import { LinkHrefs } from '@/utils/links';
 import { Box, Grid, Link } from '@mui/material';

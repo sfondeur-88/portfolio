@@ -1,17 +1,19 @@
 import { ROUTE_PATHS } from '@/routes/paths';
-import { Mood, TerminalOutlined, WavingHand } from '@mui/icons-material';
+import { MOBILE_NAV_HEIGHT } from '@/utils/layout';
+import { Mood, TerminalOutlined, WavingHand, WidgetsRounded } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router';
-
-const MOBILE_NAV_HEIGHT = 56;
 
 const navItems = [
   { label: 'Welcome', path: ROUTE_PATHS.WELCOME, icon: <WavingHand fontSize="small" /> },
   { label: 'AboutMe', path: ROUTE_PATHS.ABOUT_ME, icon: <Mood fontSize="small" /> },
-  { label: 'Experience', path: ROUTE_PATHS.EXPERIENCE, icon: <TerminalOutlined fontSize="small" /> },
+  {
+    label: 'Experience',
+    path: ROUTE_PATHS.EXPERIENCE,
+    icon: <TerminalOutlined fontSize="small" />,
+  },
+  { label: 'Extensions', path: ROUTE_PATHS.EXTENSIONS, icon: <WidgetsRounded fontSize="small" /> },
 ];
-
-export const MOBILE_NAV_HEIGHT_PX = MOBILE_NAV_HEIGHT;
 
 const MobileBottomNav = () => {
   const location = useLocation();
@@ -59,10 +61,7 @@ const MobileBottomNav = () => {
               }}
             >
               {icon}
-              <Typography
-                variant="tag"
-                sx={{ fontSize: '11px', lineHeight: 1, color: 'inherit' }}
-              >
+              <Typography variant="tag" sx={{ fontSize: '11px', lineHeight: 1, color: 'inherit' }}>
                 {label}
               </Typography>
             </Box>

@@ -51,6 +51,9 @@ export enum Colours {
   Yellow = '#e5c44e', // array brackets [ ]
   Punctuation = '#ABB2BF', // white-ish punctuation in code (:,=)
   SnippetBackground = '#141414',
+  LinkedIn = '#0073b1',
+  GitHub = '#c9d1d9',
+  Gmail = '#EA4335',
 }
 
 const theme = createTheme({

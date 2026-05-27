@@ -7,7 +7,7 @@ import { NextJsIcon } from '@/components/ui/icons/NextJsIcon';
 import { PostgresIcon } from '@/components/ui/icons/PostgresIcon';
 import { ReactIcon } from '@/components/ui/icons/ReactIcon';
 import { TailwindIcon } from '@/components/ui/icons/TailwindIcon';
-import { TypeScriptIcon } from '@/components/ui/icons/TypescriptIcon';
+import { TypeScriptIcon } from '@/components/ui/icons/TypeScriptIcon';
 import { Colours } from '@/theme';
 import { grydSectionLinks } from '@/utils/links';
 import { Box, Grid, Link } from '@mui/material';

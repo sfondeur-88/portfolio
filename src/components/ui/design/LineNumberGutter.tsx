@@ -15,31 +15,50 @@ const LineNumberGutter = ({ children }: LineNumberGutterProps) => {
   const [lineCount, setLineCount] = useState<number>(LINE_COUNT_DEFAULT);
   const { pathname, hash } = useLocation();
 
-  // Reset scroll to top and clear stale line count on route change.
-  // Skip the scroll reset when navigating to a hash - useNavigateToSection
-  // will handle scrolling to the target section instead.
-  // Both happen before paint so there's no flicker.
   useLayoutEffect(() => {
     if (!hash && scrollRef.current) scrollRef.current.scrollTop = 0;
-    setLineCount(LINE_COUNT_DEFAULT);
+    if (!hash) setLineCount(LINE_COUNT_DEFAULT);
   }, [pathname, hash]);
 
-  // Measure after the browser has finished layout. ResizeObserver handles all
-  // subsequent reflows (images loading, fonts, etc.) automatically.
+  // Measure after the browser has finished layout
   useEffect(() => {
     if (!contentRef.current) return;
 
-    const updateLineCount = () => {
+    const measure = () => {
       if (!contentRef.current) return;
       const totalLines = Math.ceil(contentRef.current.scrollHeight / LINE_HEIGHT) + 2;
       setLineCount(Math.max(LINE_COUNT_DEFAULT, totalLines));
     };
 
-    // rAF ensures the browser has painted the new content before we read scrollHeight.
-    const raf = requestAnimationFrame(updateLineCount);
+    // Wait for all images in the content to load before measuring, then do a
+    // final rAF to ensure layout has settled. Handles both uncached (onload)
+    // and already-cached images.
+    const measureAfterImages = () => {
+      if (!contentRef.current) return;
+      const images = Array.from(contentRef.current.querySelectorAll('img'));
+      const pending = images.filter((img) => !img.complete);
 
-    const observer = new ResizeObserver(updateLineCount);
+      if (pending.length === 0) {
+        requestAnimationFrame(measure);
+      } else {
+        let remaining = pending.length;
+        const onLoad = () => {
+          remaining -= 1;
+          if (remaining === 0) requestAnimationFrame(measure);
+        };
+        pending.forEach((img) => {
+          img.addEventListener('load', onLoad, { once: true });
+          img.addEventListener('error', onLoad, { once: true });
+        });
+      }
+    };
+
+    // rAF to let the DOM commit before we query images.
+    const raf = requestAnimationFrame(measureAfterImages);
+
+    const observer = new ResizeObserver(measure);
     observer.observe(contentRef.current);
+    if (scrollRef.current) observer.observe(scrollRef.current);
 
     return () => {
       cancelAnimationFrame(raf);

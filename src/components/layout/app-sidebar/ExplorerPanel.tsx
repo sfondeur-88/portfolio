@@ -19,10 +19,24 @@ const ExplorerPanel = ({ activePanel }: ExplorerPanelProps) => {
         overflow: 'hidden',
       }}
     >
-      <Box sx={{ width: 280, display: activePanel === 'explorer' ? 'block' : 'none' }}>
+      <Box
+        sx={{
+          width: 280,
+          height: '100%',
+          overflowY: 'auto',
+          display: activePanel === 'explorer' ? 'block' : 'none',
+        }}
+      >
         <ExplorerContent />
       </Box>
-      <Box sx={{ width: 280, display: activePanel === 'extensions' ? 'block' : 'none' }}>
+      <Box
+        sx={{
+          width: 280,
+          height: '100%',
+          overflowY: 'auto',
+          display: activePanel === 'extensions' ? 'block' : 'none',
+        }}
+      >
         <ExtensionsContent />
       </Box>
     </Box>

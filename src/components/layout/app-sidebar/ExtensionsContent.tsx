@@ -4,7 +4,7 @@ import { BuildRounded, MenuBookRounded, SportsEsportsRounded } from '@mui/icons-
 import { Box, Chip, Divider, Stack, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 
-type Category = 'project' | 'tools' | 'reading' | 'gaming' | 'tabletop';
+type Category = 'projects' | 'tools' | 'reading' | 'gaming' | 'tabletop';
 
 interface Extension {
   icon: ReactNode;
@@ -14,7 +14,7 @@ interface Extension {
 }
 
 const CATEGORY_COLOURS: Record<Category, string> = {
-  project: '#31AA8D',
+  projects: '#31AA8D',
   tools: '#C678DD',
   reading: '#CC837C',
   gaming: '#79C8E2',
@@ -25,31 +25,32 @@ const extensions: Extension[] = [
   {
     icon: <ZapIcon sx={{ fontSize: 24 }} />,
     title: 'Side Projects',
-    description: 'Competitive pokemon team builder and battle app, Local Marketplace app',
-    category: 'project',
+    description:
+      'Competitive pokemon team builder and battle tool, A local Marketplace app, and a Social media related app.',
+    category: 'projects',
   },
   {
     icon: <BuildRounded sx={{ fontSize: 24 }} />,
-    title: `Tools I'm Learning`,
-    description: 'Tailwind v4, Drizzle ORM, Supabase, Claude Code (in-depth), Biome',
+    title: `New Tools I'm Learning`,
+    description: 'Tailwind v4, Drizzle ORM, Supabase, Claude Code (advanced), Biome.',
     category: 'tools',
   },
   {
     icon: <MenuBookRounded sx={{ fontSize: 24 }} />,
     title: `Books I'm Reading`,
-    description: 'The Phoenix Project, Beyond the Aquila Rift, Neuromancer',
+    description: 'The Phoenix Project, Beyond the Aquila Rift, Neuromancer.',
     category: 'reading',
   },
   {
     icon: <SportsEsportsRounded sx={{ fontSize: 24 }} />,
     title: "Games I'm Playing",
-    description: `Baldur's Gate 3, Dragon Quest I&II HD-2D Remake, Expedition 33`,
+    description: `Baldur's Gate 3, Dragon Quest I&II HD-2D Remake, Expedition 33.`,
     category: 'gaming',
   },
   {
     icon: <D20Icon sx={{ fontSize: 24 }} />,
-    title: 'D&D DM',
-    description: 'Will be running a D&D campaign for the first time as a DM',
+    title: 'Dungeons & Dragons',
+    description: `I'll soon be running a D&D campaign for the first time as a DM. It sounded like a fun challenge and could help build soft-skills.`,
     category: 'tabletop',
   },
 ];

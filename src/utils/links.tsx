@@ -1,3 +1,4 @@
+import { Colours } from '@/theme';
 import GitHub from '@mui/icons-material/GitHub';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 
@@ -14,8 +15,22 @@ export enum LinkHrefs {
 }
 
 export const socialLinks = [
-  { icon: <LinkedIn />, href: LinkHrefs.LinkedIn, label: 'View LinkedIn Profile', handle: 'linkedin.com/in/shane-fondeur', external: true },
-  { icon: <GitHub />, href: LinkHrefs.GitHub, label: 'View GitHub Profile', handle: 'github.com/sfondeur-88', external: true },
+  {
+    icon: <LinkedIn />,
+    href: LinkHrefs.LinkedIn,
+    label: 'View LinkedIn Profile',
+    handle: 'linkedin.com/in/shane-fondeur',
+    external: true,
+    colour: Colours.LinkedIn,
+  },
+  {
+    icon: <GitHub />,
+    href: LinkHrefs.GitHub,
+    label: 'View GitHub Profile',
+    handle: 'github.com/sfondeur-88',
+    external: true,
+    colour: Colours.GitHub,
+  },
 ];
 
 export const grydSectionLinks = [

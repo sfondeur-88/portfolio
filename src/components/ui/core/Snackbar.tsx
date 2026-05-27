@@ -39,7 +39,21 @@ const Snackbar = (props: Props) => {
       }}
       message={
         <Stack direction="row" alignItems="center" gap={1}>
-          <Check fontSize="small" sx={{ color: 'secondary.main' }} />
+          <Stack
+            alignItems="center"
+            justifyContent="center"
+            sx={{
+              width: 28,
+              height: 28,
+              borderRadius: '50%',
+              backgroundColor: 'rgba(49, 170, 141, 0.15)',
+              border: '1.5px solid',
+              borderColor: 'primary.main',
+              flexShrink: 0,
+            }}
+          >
+            <Check sx={{ fontSize: 16, color: 'primary.main' }} />
+          </Stack>
           <Typography>{message}</Typography>
         </Stack>
       }
