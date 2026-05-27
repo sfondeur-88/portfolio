@@ -18,6 +18,7 @@ const Footer = () => {
         zIndex: 1000,
         border: '1px solid',
         borderColor: 'divider',
+        borderTopColor: '#1d2a37',
         borderRadius: '0px 0px 8px 8px',
         backgroundColor: 'background.default',
       }}
@@ -32,7 +33,7 @@ const Footer = () => {
             justifyContent: 'center',
             paddingX: 1,
             borderRight: '1px solid',
-            borderRightColor: 'divider',
+            borderRightColor: '#1d2a37',
           }}
         >
           <Typography variant="label" color="primary.main">

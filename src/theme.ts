@@ -74,11 +74,11 @@ const theme = createTheme({
   typography: {
     fontFamily: '"JetBrains Mono", monospace',
     title: {
-      fontSize: '50px',
+      fontSize: 'clamp(26px, 6vw, 50px)',
       fontWeight: 400,
     },
     subtitle: {
-      fontSize: '32px',
+      fontSize: 'clamp(20px, 4vw, 32px)',
       fontWeight: 400,
     },
     body: {
@@ -86,7 +86,7 @@ const theme = createTheme({
       fontWeight: 400,
     },
     bodyLarge: {
-      fontSize: '18px',
+      fontSize: 'clamp(16px, 2.5vw, 18px)',
       fontWeight: 500,
     },
     bodySmall: {
@@ -115,11 +115,32 @@ const theme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          backgroundColor: '#000',
-        },
-      },
+      styleOverrides: `
+        body {
+          background-color: #000;
+        }
+        *::-webkit-scrollbar {
+          width: 12px;
+          height: 12px;
+        }
+        *::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        *::-webkit-scrollbar-thumb {
+          background-color: #2D3F50;
+          border-radius: 8px;
+          border: 3px solid transparent;
+          background-clip: padding-box;
+        }
+        *::-webkit-scrollbar-thumb:hover {
+          background-color: #4A6580;
+          border: 2px solid transparent;
+          background-clip: padding-box;
+        }
+        *::-webkit-scrollbar-corner {
+          background: transparent;
+        }
+      `,
     },
     MuiIconButton: {
       styleOverrides: {

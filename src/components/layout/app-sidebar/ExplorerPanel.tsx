@@ -14,7 +14,7 @@ const ExplorerPanel = ({ activePanel }: ExplorerPanelProps) => {
         width: activePanel ? 280 : 0,
         // TODO:Shane - decide if we need: overflow: 'hidden' still
         borderRight: '1px solid',
-        borderColor: 'divider',
+        borderColor: '#1d2a37',
         backgroundColor: 'background.default',
         transition: 'width 0.15s ease',
       }}

@@ -24,6 +24,9 @@ const Header = () => {
         borderLeft: '1px solid',
         borderRight: '1px solid',
         borderColor: 'divider',
+        borderBottomWidth: { xs: '1px', sm: 0 },
+        borderBottomStyle: 'solid',
+        borderBottomColor: 'divider',
         borderRadius: '8px 8px 0px 0px',
       }}
     >
@@ -37,16 +40,23 @@ const Header = () => {
         />
       </Box>
 
-      {/* TODO:Shane - Search/Input-lookalike area to wrap the name */}
       <Box
         sx={{
           position: 'absolute',
           left: '50%',
           transform: 'translateX(-50%)',
-          // border: '1px solid',
+          display: 'flex',
+          alignItems: 'center',
+          paddingX: 5,
+          paddingY: '2px',
+          border: '1px solid',
+          borderColor: '#1d2a37',
+          borderRadius: '6px',
+          backgroundColor: 'rgba(255, 255, 255, 0.04)',
+          whiteSpace: 'nowrap',
         }}
       >
-        <Typography variant="body" fontWeight={700} color="primary">
+        <Typography variant="bodySmall" fontWeight={700} color="primary">
           shane_fondeur
         </Typography>
       </Box>

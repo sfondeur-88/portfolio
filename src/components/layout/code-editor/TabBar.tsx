@@ -37,7 +37,7 @@ const TabBar = () => {
         height: TAB_BAR_HEIGHT,
         borderTop: '1px solid',
         borderBottom: '1px solid',
-        borderColor: 'divider',
+        borderColor: '#1d2a37',
         backgroundColor: 'background.default',
         zIndex: 1000,
       }}
@@ -53,7 +53,7 @@ const TabBar = () => {
               minHeight: TAB_BAR_HEIGHT,
               textTransform: 'inherit',
               borderRight: '1px solid',
-              borderRightColor: 'divider',
+              borderRightColor: '#1d2a37',
               borderRadius: 0,
               boxSizing: 'border-box',
               transition: '200ms color',

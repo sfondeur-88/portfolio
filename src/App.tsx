@@ -1,28 +1,30 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material';
 import Footer from './components/layout/footer/Footer';
 import Header from './components/layout/header/Header';
 import Main from './components/layout/main/Main';
 import theme from './theme';
 
 function App() {
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div
-        style={{
-          height: 'calc(100vh - 16px)', // <body> has 8px padding (16 top & down included) to offset.
+      <Box
+        sx={{
+          height: isMobile ? '100dvh' : 'calc(100vh - 16px)',
           maxWidth: '1700px',
           margin: 'auto',
           display: 'flex',
           flexDirection: 'column',
-          borderRadius: '8px',
-          backgroundColor: theme.palette.background.default,
+          borderRadius: isMobile ? 0 : '8px',
+          backgroundColor: 'background.default',
         }}
       >
         <Header />
         <Main />
-        <Footer />
-      </div>
+        {!isMobile && <Footer />}
+      </Box>
     </ThemeProvider>
   );
 }

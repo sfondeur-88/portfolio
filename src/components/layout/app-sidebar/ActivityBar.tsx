@@ -67,8 +67,11 @@ const ActivityBar = (props: ActivityBarProps) => {
                 borderLeft: '2px solid',
                 borderColor: activePanel === id ? 'primary.main' : 'transparent',
                 color: activePanel === id ? 'text.primary' : 'grey',
-                // TODO:Shane - make the bg stand out more, or remove. (Its too subtle atm)
-                backgroundColor: activePanel === id ? 'action.selected' : 'transparent',
+                backgroundColor: activePanel === id ? 'rgba(49, 170, 141, 0.12)' : 'transparent',
+                '&:hover': {
+                  backgroundColor: activePanel === id ? 'rgba(49, 170, 141, 0.2)' : 'transparent',
+                  color: 'text.primary',
+                },
               }}
             >
               {icon}

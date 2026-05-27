@@ -8,6 +8,7 @@ const Main = () => {
       sx={{
         flexGrow: 1,
         minHeight: 0,
+        minWidth: 0,
         borderLeft: '1px solid',
         borderRight: '1px solid',
         borderColor: 'divider',

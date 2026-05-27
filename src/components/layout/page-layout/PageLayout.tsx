@@ -1,29 +1,19 @@
+import MobileBottomNav from '../mobile-bottom-nav/MobileBottomNav';
 import AppSidebar from '../app-sidebar/AppSidebar';
 import CodeEditor from '../code-editor/CodeEditor';
+import { useMediaQuery } from '@mui/material';
+import theme from '@/theme';
 
 const PageLayout = () => {
-  // TODO:Shane - scrollbar (CodeEditor.tsx)
-  // scrollBehavior: 'smooth',
-  // '::-webkit-scrollbar': {
-  //   width: '16px',
-  // },
-  // '::-webkit-scrollbar-track': {
-  //   backgroundColor: '#222222',
-  // },
-  // '::-webkit-scrollbar-thumb': {
-  //   backgroundColor: '#444444',
-  //   borderRadius: '2px',
-  //   cursor: 'pointer',
-
-  //   '&:hover': {
-  //     backgroundColor: '#9A9A9A',
-  //   },
-  // },
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'row' }}>
-      <AppSidebar />
-      <CodeEditor />
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'row' }}>
+        {!isMobile && <AppSidebar />}
+        <CodeEditor />
+      </div>
+      {isMobile && <MobileBottomNav />}
     </div>
   );
 };

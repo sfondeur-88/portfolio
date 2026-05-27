@@ -4,8 +4,9 @@ import SyntaxToken from '@/components/ui/design/SyntaxToken';
 import TerminalCursorBlink from '@/components/ui/design/TerminalCursorBlink';
 import { useCopyToClipboard } from '@/hooks/useCopyToClipboard';
 import { Colours } from '@/theme';
-import { emailAddress, LinkHrefs } from '@/utils/links';
-import { Box, Link, Stack, Typography } from '@mui/material';
+import { emailAddress, LinkHrefs, socialLinks } from '@/utils/links';
+import { Email } from '@mui/icons-material';
+import { Box, IconButton, Link, Stack, Typography } from '@mui/material';
 import { useEffect } from 'react';
 
 const Welcome = () => {
@@ -24,15 +25,26 @@ const Welcome = () => {
         position={{ bottom: 50, right: 50 }}
         colour="#66FFCC"
       />
-      <Box p={1}>
-        {/* TODO:Shane - Adjust alignment on smaller viewports. */}
-        <Typography fontSize={20} fontWeight={400} fontStyle={'italic'}>
+
+      {/* Content card — constrained width so it never sprawls on wide screens,
+          centred with generous padding so it holds together when the title wraps */}
+      <Box
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+          width: '100%',
+          maxWidth: { xs: '100%', sm: '640px' },
+          px: { xs: '24px', sm: 6 },
+          py: { xs: '24px', sm: 2 },
+        }}
+      >
+        <Typography fontSize={{ xs: 15, sm: 20 }} fontWeight={400} fontStyle="italic">
           Hi there!!
         </Typography>
 
         <Typography variant="title">Welcome to my portfolio</Typography>
 
-        <Typography variant="subtitle" color="secondary.main" sx={{ mt: 2, mb: 6 }}>
+        <Typography variant="subtitle" color="secondary.main" sx={{ mt: 2, mb: { xs: 3, sm: 5 } }}>
           <TerminalCursorBlink />
           senior_front_end_engineer
         </Typography>
@@ -82,14 +94,38 @@ const Welcome = () => {
             </Link>
           </Typography>
         </Stack>
+
+        {/* Mobile-only social links */}
+        <Stack
+          direction="row"
+          gap={1}
+          mt={3}
+          sx={{ display: { xs: 'flex', sm: 'none' } }}
+        >
+          {socialLinks.map(({ icon, href, label }) => (
+            <IconButton
+              key={label}
+              component="a"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+            >
+              {icon}
+            </IconButton>
+          ))}
+          <IconButton aria-label="Copy email address" onClick={() => copy(emailAddress)}>
+            <Email />
+          </IconButton>
+        </Stack>
       </Box>
 
       <Typography
         variant="subtitle"
-        fontSize={46}
+        fontSize={{ xs: 28, sm: 46 }}
         textAlign="center"
         color="secondary.main"
-        sx={{ mt: 10 }}
+        sx={{ mt: { xs: 4, sm: 8 }, position: 'relative', zIndex: 1 }}
       >
         {`Plz hire 🙏`}
       </Typography>

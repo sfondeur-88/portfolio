@@ -27,6 +27,8 @@ const GrydSection = () => {
           backgroundColor: Colours.SnippetBackground,
           borderRadius: '16px',
           border: `1px solid ${Colours.SnippetBackground}`,
+          overflowX: 'auto',
+          maxWidth: '100%',
         }}
       >
         <Typography component="pre" variant="code" sx={{ lineHeight: 1.8, m: 0 }}>

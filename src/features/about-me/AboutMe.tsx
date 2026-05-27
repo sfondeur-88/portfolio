@@ -1,7 +1,11 @@
 import { Colours } from '@/theme';
 import { LinkHrefs } from '@/utils/links';
-import { Box, Link, Stack, Typography } from '@mui/material';
+import { Box, Divider, Link, Stack, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
+
+const SectionDivider = () => (
+  <Divider sx={{ display: { xs: 'block', sm: 'none' }, borderColor: 'divider', mx: '48px' }} />
+);
 
 const AboutMe = () => {
   useEffect(() => {
@@ -9,7 +13,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <Stack component="article" gap={8} p={4}>
+    <Stack component="article" gap={8} p={{ xs: '12px', sm: 4 }} sx={{ wordBreak: 'break-word' }}>
       <section id="intro">
         <Typography variant="subtitle" color="text" sx={{ fontSize: '24px', mb: 1 }}>
           // Intro
@@ -21,6 +25,8 @@ const AboutMe = () => {
             backgroundColor: '#141414',
             border: '1px solid #141414',
             borderRadius: '16px',
+            overflowX: 'auto',
+            maxWidth: '100%',
           }}
         >
           <Typography
@@ -30,6 +36,7 @@ const AboutMe = () => {
             sx={{
               display: 'block',
               lineHeight: 1.8,
+              margin: 0,
             }}
           >
             <span>{'/**'}</span>
@@ -71,6 +78,8 @@ const AboutMe = () => {
         </Typography>
       </section>
 
+      <SectionDivider />
+
       <section id="origin-story">
         <Typography variant="subtitle" color="text" sx={{ fontSize: '24px', mb: 1 }}>
           // Origin Story
@@ -93,6 +102,8 @@ const AboutMe = () => {
         </Typography>
       </section>
 
+      <SectionDivider />
+
       <section id="education">
         <Typography variant="subtitle" color="text" sx={{ fontSize: '24px', mb: 1 }}>
           // Education
@@ -105,13 +116,15 @@ const AboutMe = () => {
             backgroundColor: '#141414',
             border: '1px solid #141414',
             borderRadius: '16px',
+            overflowX: 'auto',
+            maxWidth: '100%',
           }}
         >
           <Typography
             component="pre"
             variant="code"
             color="primary.main"
-            sx={{ display: 'block', p: 1, lineHeight: 1.8 }}
+            sx={{ display: 'block', p: 1, lineHeight: 1.8, margin: 0 }}
           >
             <ColorSpan c="#C678DD">const </ColorSpan>
             <ColorSpan c={Colours.Blue}>education</ColorSpan>
@@ -232,8 +245,8 @@ const AboutMe = () => {
           codebase with actual stakeholders, and it confirmed that this was the career I wanted.
         </Typography>
         <Typography mt={4}>
-          My final term project was an app i dubbed "ShopForStuff", a full-stack Ruby on Rails
-          marketplace I built from scratch. It had Authentication, category browsing, image uploads,
+          My final term project was an app i cleverly titled "ShopForStuff", a full-stack Ruby on Rails
+          marketplace I built from scratch. It had authentication, category browsing, image uploads,
           an admin portal system, and Stripe integration for purchases. I used the Materialize CSS
           framework which at the time felt very cutting edge. It placed 2nd highest in the class and
           earned 101%, which I was quite proud of.
