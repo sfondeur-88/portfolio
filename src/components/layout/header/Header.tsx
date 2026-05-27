@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 const Header = () => {
   const onTrafficLightClick = () => {
-    // TODO:Shane - Easter egg when clicked
+    // TODO:Shane - Easter egg when clicked?
   };
 
   return (

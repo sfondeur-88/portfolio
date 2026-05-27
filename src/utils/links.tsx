@@ -14,8 +14,8 @@ export enum LinkHrefs {
 }
 
 export const socialLinks = [
-  { icon: <LinkedIn />, href: LinkHrefs.LinkedIn, label: 'View LinkedIn Profile', external: true },
-  { icon: <GitHub />, href: LinkHrefs.GitHub, label: 'View GitHub Profile', external: true },
+  { icon: <LinkedIn />, href: LinkHrefs.LinkedIn, label: 'View LinkedIn Profile', handle: 'linkedin.com/in/shane-fondeur', external: true },
+  { icon: <GitHub />, href: LinkHrefs.GitHub, label: 'View GitHub Profile', handle: 'github.com/sfondeur-88', external: true },
 ];
 
 export const grydSectionLinks = [
