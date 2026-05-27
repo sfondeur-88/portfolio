@@ -24,17 +24,15 @@ const MobileBottomNav = () => {
       component="nav"
       aria-label="Mobile navigation"
       sx={{
-        minHeight: MOBILE_NAV_HEIGHT,
-        paddingBottom: 'env(safe-area-inset-bottom)',
         flexShrink: 0,
         display: 'flex',
-        alignItems: 'flex-start',
+        flexDirection: 'column',
         borderTop: '1px solid',
         borderColor: 'divider',
         backgroundColor: 'background.default',
       }}
     >
-      <Stack direction="row" alignItems="center" flex={1} height="100%">
+      <Stack direction="row" alignItems="center" height={MOBILE_NAV_HEIGHT}>
         {navItems.map(({ label, path, icon }) => {
           const isActive = location.pathname === path;
           return (
@@ -68,6 +66,7 @@ const MobileBottomNav = () => {
           );
         })}
       </Stack>
+      <Box sx={{ height: 'env(safe-area-inset-bottom)', backgroundColor: 'background.default' }} />
     </Box>
   );
 };
