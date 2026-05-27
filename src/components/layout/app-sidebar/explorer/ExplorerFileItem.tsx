@@ -13,7 +13,6 @@ interface Props {
   depth: number;
 }
 
-// For "skip to" sections - MoveDown, DoubleArrow, KeyboardDouble
 const ExplorerFileItem = (props: Props) => {
   const { file, depth } = props;
 
@@ -22,7 +21,6 @@ const ExplorerFileItem = (props: Props) => {
   const { goToSection } = useNavigateToSection();
 
   const isActive = pathname === file.path;
-  const hasSections = file.sections && file.sections.length > 0;
 
   return (
     <Box key={file.path}>
@@ -38,28 +36,25 @@ const ExplorerFileItem = (props: Props) => {
         <Typography variant="bodySmall">{file.label}</Typography>
       </Box>
 
-      <>
-        {hasSections &&
-          file.sections?.map((section) => (
-            <Box
-              key={section.id}
-              onClick={() => goToSection(file.path, section.id, pathname)}
-              sx={[
-                treeItemSx,
-                {
-                  ml: `${INDENT_PX * (depth + 1) + 49}px`,
-                  color: 'text.secondary',
-                  '&:hover': { ...activeFileSx },
-                },
-              ]}
-            >
-              <Typography variant="caption" sx={{ color: '#505050' }}>
-                #
-              </Typography>
-              <Typography variant="caption">{section.label}</Typography>
-            </Box>
-          ))}
-      </>
+      {file.sections?.map((section) => (
+        <Box
+          key={section.id}
+          onClick={() => goToSection(file.path, section.id)}
+          sx={[
+            treeItemSx,
+            {
+              ml: `${INDENT_PX * (depth + 1) + 49}px`,
+              color: 'text.secondary',
+              '&:hover': { ...activeFileSx },
+            },
+          ]}
+        >
+          <Typography variant="caption" sx={{ color: '#505050' }}>
+            #
+          </Typography>
+          <Typography variant="caption">{section.label}</Typography>
+        </Box>
+      ))}
     </Box>
   );
 };

@@ -6,7 +6,7 @@ import { Outlet, useLocation } from 'react-router';
 import TabBar from './TabBar';
 
 const CodeEditor = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const showGutter = pathname !== '/welcome';
   const welcomeScrollRef = useRef<HTMLDivElement>(null);
@@ -14,10 +14,10 @@ const CodeEditor = () => {
   // Scroll the welcome page container back to top on route change.
   // Pages with a gutter handle this inside LineNumberGutter.
   useLayoutEffect(() => {
-    if (!showGutter && welcomeScrollRef.current) {
+    if (!hash && !showGutter && welcomeScrollRef.current) {
       welcomeScrollRef.current.scrollTop = 0;
     }
-  }, [pathname, showGutter]);
+  }, [pathname, hash, showGutter]);
 
   return (
     <Stack style={{ flex: 1, minHeight: 0, minWidth: 0, width: 0 }}>

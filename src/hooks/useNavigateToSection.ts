@@ -1,29 +1,22 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 export const useNavigateToSection = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const pendingSectionId = useRef<string | null>(null);
-
   useEffect(() => {
-    if (pendingSectionId.current) {
-      const el = document.getElementById(pendingSectionId.current);
+    if (location.hash) {
+      const sectionId = location.hash.slice(1); // strip the leading '#'
+      const el = document.getElementById(sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
-        pendingSectionId.current = null;
       }
     }
-  }, [location.pathname]);
+  }, [location.hash]);
 
-  const goToSection = (path: string, sectionId: string, currentPath: string) => {
-    if (currentPath === path) {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      pendingSectionId.current = sectionId;
-      navigate(path);
-    }
+  const goToSection = (path: string, sectionId: string) => {
+    navigate(`${path}#${sectionId}`);
   };
 
   return { goToSection };

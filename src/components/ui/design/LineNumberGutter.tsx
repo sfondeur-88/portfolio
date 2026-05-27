@@ -13,14 +13,16 @@ const LineNumberGutter = ({ children }: LineNumberGutterProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [lineCount, setLineCount] = useState<number>(LINE_COUNT_DEFAULT);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   // Reset scroll to top and clear stale line count on route change.
+  // Skip the scroll reset when navigating to a hash - useNavigateToSection
+  // will handle scrolling to the target section instead.
   // Both happen before paint so there's no flicker.
   useLayoutEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+    if (!hash && scrollRef.current) scrollRef.current.scrollTop = 0;
     setLineCount(LINE_COUNT_DEFAULT);
-  }, [pathname]);
+  }, [pathname, hash]);
 
   // Measure after the browser has finished layout. ResizeObserver handles all
   // subsequent reflows (images loading, fonts, etc.) automatically.
